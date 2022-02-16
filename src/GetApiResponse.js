@@ -5,7 +5,7 @@ import firebase from "./firebase.js";
 import zoltan from "./assets/zoltan.png";
 
 
-const GetApiResponse = ({ showMaze }) => {
+const GetApiResponse = ({ showAdvice }) => {
   // State for advice
   const [advice, setAdvice] = useState([]);
 
@@ -27,20 +27,6 @@ const GetApiResponse = ({ showMaze }) => {
     setUserName(e.target.value);
   };
 
-  // Handler for submit button
-  const submitChange = (e) => {
-    e.preventDefault();
-    setUserInput("");
-    setUserName("");
-
-    const dbRef = firebase.database().ref();
-    const newUser = {
-      name: userName,
-      input: advice,
-    };
-    dbRef.push(newUser);
-    setMazePlease(true);
-  };
 
   useEffect(() => {
     if (query !== "") {
@@ -51,24 +37,40 @@ const GetApiResponse = ({ showMaze }) => {
         dataResponse: "json",
       }).then((res) => {
         const data = res.data;
+        console.log(data);
         // Check if data has object of slips
         if (data.hasOwnProperty("slips")) {
           setAdvice(res.data.slips[0].advice);
         } else {
-          // Second API call to return advice for words not in firs API data base
+          // Second API call to return advice for words not in first API data base
           randomAdvice(setAdvice);
         }
       });
     }
   }, [query]);
 
+    // Handler for submit button
+    const submitChange = (e) => {
+      e.preventDefault();
+      setUserInput("");
+      setUserName("");
+  
+      const dbRef = firebase.database().ref();
+      const newUser = {
+        name: userName,
+        input: advice,
+      };
+      dbRef.push(newUser);
+      setAdvicePlease(true);
+    };
+
 
   //toggling component
-  const [mazePlease, setMazePlease] = useState(false);
+  const [advicePlease, setAdvicePlease] = useState(false);
 
   useEffect(() => {
-    if (mazePlease) {
-      showMaze();
+    if (advicePlease) {
+      showAdvice();
     }
   });
 

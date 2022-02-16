@@ -19,7 +19,6 @@ const Advice = () => {
     });
   }, []);
 
-
   return (
     <div>
       <section className='adviceSection'>

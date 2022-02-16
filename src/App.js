@@ -1,6 +1,6 @@
 import "./App.css";
 import GetApiResponse from "./GetApiResponse.js";
-import Maze from "./Maze.js";
+// import Maze from "./Maze.js";
 import Advice from "./Advice.js";
 import {useState} from "react";
 
@@ -22,15 +22,15 @@ function App() {
           {/* Show component depending on state string value */}
           {
             showComponent === "api"
-            ?<GetApiResponse showMaze={() => setShowComponent("maze")}/>
+            ?<GetApiResponse showAdvice={() => setShowComponent("advice")}/>
             : null
           }
 
-          {
+          {/* {
             showComponent === "maze"
             ?<Maze showAdvice={() => setShowComponent("advice")}/>
             : null
-          }
+          } */}
 
           {
             showComponent === "advice"
