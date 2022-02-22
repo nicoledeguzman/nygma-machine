@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import randomAdvice from "./randomAdvice.js";
 import firebase from "./firebase.js";
-import zoltan from "./assets/zoltan.png";
+// import zoltan from "./assets/zoltan.png";
 
 
 const GetApiResponse = ({ showAdvice }) => {
@@ -37,7 +37,6 @@ const GetApiResponse = ({ showAdvice }) => {
         dataResponse: "json",
       }).then((res) => {
         const data = res.data;
-        console.log(data);
         // Check if data has object of slips
         if (data.hasOwnProperty("slips")) {
           setAdvice(res.data.slips[0].advice);
@@ -76,13 +75,13 @@ const GetApiResponse = ({ showAdvice }) => {
 
   return (
     <div className="wrapper">
-      <div className="scalingContainer">
-        <div className="zoltanContainer">
-          <img className="zoltanImg" src={zoltan} alt="fortune teller" />
+      <div className="scaling-container">
+        <div className="logo-container">
+          {/* <img className="logo-img" src={zoltan} alt="fortune teller" /> */}
         </div>
       </div>
-      <div className="formContainer">
-        <div className="formElement">
+      <div className="form-container">
+        <div className="form-element">
           <form onSubmit={submitChange}>
             <label htmlFor="newName">Please enter your name:</label>
             <input
@@ -105,7 +104,7 @@ const GetApiResponse = ({ showAdvice }) => {
               required
             />
 
-            <div className="buttonContainer">
+            <div className="button-container">
               <button
                 type="submit"
                 disabled={userName && userInput ? false : true}

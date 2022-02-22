@@ -21,7 +21,7 @@ const Advice = () => {
 
   return (
     <div>
-      <section className='adviceSection'>
+      <section className='advice-section'>
       <h4>So, {displayedName}… You asked for some life-changing advice?</h4>
         <p>Here's what Zoltan the GREAT has to say about that…</p>
         <p>{displayedAdvice}</p>

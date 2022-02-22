@@ -1,15 +1,15 @@
 /*general*/
-/*general*/
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Poiret+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
-   background-color: #1D3548;
+  /* background-color: #FFFFFF; */
   margin: 0;
   text-align: center;
 }
@@ -19,34 +19,49 @@ header {
   display: block;
 }
 
-footer{
+footer {
   color: white;
+  align-self: flex-end;
+  width: 25vw;
+  margin: 0;
+  padding: 15px;
+  background-color: #96A76D;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 h1 {
   font-size: 1em;
   color: transparent;
 }
-h4{
+
+h4 {
   color: black;
-  font-family: 'hind siliguri';
+  font-family: 'Roboto Mono', monospace;
 }
 
 a {
-  background-color: transparent;
+  background-color: transparent; 
   -webkit-text-decoration-skip: objects;
   color:white;
   text-decoration: none;
 }
+
 img {
   border-style: none;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
-p{
-    font-family: 'hind siliguri' ;
-    background-color: transparent;
+
+p {
+  font-family: 'Roboto Mono', monospace;
+  background-color: transparent;
 }
+
 button,
 input {
   font-family: sans-serif;
@@ -54,18 +69,22 @@ input {
   line-height: 1.15;
   margin: 0;
 }
+
 button,
 input {
   overflow: visible;
 }
+
 button {
   text-transform: none;
 }
+
 button,
 html [type="button"],
 [type="submit"] {
   -webkit-appearance: button;
 }
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -73,6 +92,7 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
+
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -91,138 +111,37 @@ button:-moz-focusring,
   margin: 0px auto;
 }
 
-.siteBackground {
-  background: radial-gradient(50% 50% at 50% 50%, #00FFC2 0%, rgba(255, 255, 255, 0) 100%), #1D3548;
+.site-background {
+  /* background: radial-gradient(50% 50% at 50% 50%, #00FFC2 0%, rgba(255, 255, 255, 0) 100%), #1D3548; */
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 /*advice form*/
 
 
-/*maze*/
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  width: 630px;
-  height: 630px;
-}
-
-.path {
-  height: 42px;
-  width: 42px;
-}
-
-.red {
-  background-color: red;
-}
-
-.block {
-  background-color:#1D3548;
-  border: 0.5px solid #1D3548;
-}
-
-.mazeContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 8%;
- 
-}
-
-.controlsContainer {
-  color: transparent;
-}
-
-.topArrow, .bottomArrow, .middleArrow{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.textContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.mazeText {
-color: white;
-text-align: center;
-width: 50%;
-
-}
-.arrow {
-  height: 54px;
-  width: 54px;
-  background-color: transparent;
-	border-top: 30px solid transparent;
-	border-right: 36px solid #1D3548;
-	border-bottom: 30px solid transparent;
-  border-radius: 15px;
-  border-left: transparent;
-  color: transparent;
-}
-
-.arrow:hover {
-  height: 54px;
-  width: 54px;
-  background-color: transparent;
-	border-top: 30px solid transparent;
-	border-right: 36px solid white;
-	border-bottom: 30px solid transparent;
-  border-radius: 15px;
-  border-left: transparent;
-  color: transparent;
-}
-
- .right {
-
- transform: rotate(180deg);
-}
-
-.down{
- transform: rotate(-90deg);
-}
-.up{
- transform: rotate(90deg);
-}
-
-.spacer {
-    height:38px;
-width: 63px;
-}
-
 /*advice ready*/
 
-.giveMeAdviceWrapper {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 30;
-}  
-
-.scalingContainer{
+.scaling-container {
   width: 100%;
   height: auto;
 }
 
-.frontpageContainer{
+.fp-container { 
   display: flex;
   justify-content: center;
 }
 
-.formContainer {
-    width: 100%;
+.form-container {
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.formElement{
+.form-element {
 
   width: 60%;
   left: 0px;
@@ -231,28 +150,18 @@ width: 63px;
   justify-content: center;
 }
 
-
-.giveMeAdvice {
-  width: 60%;
-  padding: 30px;
-  border-radius: 8px;  
-  text-align: center;  
-  background-color: white;
-  opacity: 1;
-  font-family: 'hind siliguri';
-}
-
-.zoltanHeader{
+.logo-header {
   position: relative;
   left: -52px;
   bottom: 0px;
 }
 
-.zoltanContainer {
+.logo-container {
    display: flex;
   justify-content: center;
   padding-bottom: 0%;
 }
+
 input {
   display: inline-block;
 }
@@ -260,85 +169,79 @@ input {
 label {
   padding: 20px;
   display:block;
-text-transform: uppercase;
-font-family: 'hind siliguri';
-
-
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
 }
 
-img{
+img {
   max-width: 70%;
   height: auto;
 }
 
-
-
-.formSubmit{
+.form-submit {
   text-align: center;
-  font-family: 'hind siliguri';
+  font-family: 'Roboto Mono', monospace;
   
 }
 
-.buttonContainer{
+.button-container {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-.formContainer button{
+.form-container button {
   display: block;
 
 }
 
-.zoltanImg{
+.logo-img {
   left: 0px;
   bottom: 180px;
 }
 
-.adviceSection{
+.advice-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
-
 }
 
 
 @media (max-width: 645px) {
-  .flexContainer{
-width:  441px;
-height:  441px;
+  .flexContainer {
+    width:  441px;
+    height:  441px;
+  }
 
-}
-.path{
-height: 29.4px;
-width:29.4px;
-}
+  .path{
+    height: 29.4px;
+    width:29.4px;
+  }
 
-.mazeText{
-  width: 90%;
-}
+  .mazeText {
+    width: 90%;
+  }
 }
 
 
 @media (max-width: 445px) {
-body{
-  padding: 10px;
-}
+  body {
+    padding: 10px;
+  }
 
-  .flexContainer{
-width:  315px;
-height:  315px;
+  .flexContainer {
+    width: 315px;
+    height: 315px;
+  }
 
-}
-.path{
-height: 21px;
-width: 21px;
-}
+  .path {
+    height: 21px;
+    width: 21px;
+  }
 
-h4{
-  color:white;
-}
-
+  h4 {
+    color:white;
+  }
 }
