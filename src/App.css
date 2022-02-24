@@ -1,6 +1,6 @@
 /*general*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto+Mono&display=swap');
 
 html {
   line-height: 1.15;
@@ -9,14 +9,25 @@ html {
 }
 
 body {
-  /* background-color: #FFFFFF; */
   margin: 0;
-  text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
-footer,
+.body-left {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
-  display: block;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin: 25px 0;
+}
+
+main {
+  height: 100%;
 }
 
 footer {
@@ -25,27 +36,41 @@ footer {
   width: 25vw;
   margin: 0;
   padding: 15px;
-  background-color: #96A76D;
+  background-color: #10AC84;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+h1,
+header p {
+  padding-right: 50px;
+  margin: 0;
+}
+
 h1 {
-  font-size: 1em;
-  color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65px;
+  color: #575757;
+  text-transform: uppercase;
 }
 
 h4 {
-  color: black;
-  font-family: 'Roboto Mono', monospace;
+  color: #575757;
 }
 
 a {
   background-color: transparent; 
   -webkit-text-decoration-skip: objects;
-  color:white;
+  color: white;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  font-weight: bold;
+  color: antiquewhite;
   text-decoration: none;
 }
 
@@ -58,7 +83,6 @@ svg:not(:root) {
 }
 
 p {
-  font-family: 'Roboto Mono', monospace;
   background-color: transparent;
 }
 
@@ -73,10 +97,6 @@ input {
 button,
 input {
   overflow: visible;
-}
-
-button {
-  text-transform: none;
 }
 
 button,
@@ -109,14 +129,13 @@ button:-moz-focusring,
 .wrapper {
   max-width: 1200px;
   margin: 0px auto;
+  height: 100%;
 }
 
 .site-background {
-  /* background: radial-gradient(50% 50% at 50% 50%, #00FFC2 0%, rgba(255, 255, 255, 0) 100%), #1D3548; */
   background: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
 }
 
 /*advice form*/
@@ -125,52 +144,30 @@ button:-moz-focusring,
 /*advice ready*/
 
 .scaling-container {
-  width: 100%;
   height: auto;
-}
-
-.fp-container { 
-  display: flex;
-  justify-content: center;
-}
-
-.form-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
 }
 
 .form-element {
-
   width: 60%;
+  height: 80%;
   left: 0px;
   bottom: 150px;
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-.logo-header {
-  position: relative;
-  left: -52px;
-  bottom: 0px;
-}
-
-.logo-container {
-   display: flex;
-  justify-content: center;
-  padding-bottom: 0%;
+  margin: 0 auto;
 }
 
 input {
-  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #575757;
+  font-family: 'Roboto Mono', monospace;
 }
 
 label {
-  padding: 20px;
-  display:block;
-  text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  padding: 20px 0;
+  display: block;
 }
 
 img {
@@ -178,21 +175,27 @@ img {
   height: auto;
 }
 
-.form-submit {
-  text-align: center;
-  font-family: 'Roboto Mono', monospace;
-  
-}
-
 .button-container {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0;
 }
 
-.form-container button {
+button {
+  font-size: 18px;
   display: block;
+  background-color: #1CD1A1;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  border: none
+}
 
+button:hover,
+button:focus {
+  background-color: #10AC84;
 }
 
 .logo-img {
