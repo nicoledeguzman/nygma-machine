@@ -20,11 +20,11 @@ const Advice = () => {
   }, []);
 
   return (
-    <div>
+    <div className='advice'>
       <section className='advice-section'>
-      <h4>So, {displayedName}… You asked for some life-changing advice?</h4>
-        <p>Here's what Zoltan the GREAT has to say about that…</p>
-        <p>{displayedAdvice}</p>
+        <p>So, {displayedName}, you asked for some life-changing advice?</p>
+        <p>Here's what we pulled for you...</p>
+        <p class="advice-given">{displayedAdvice}</p>
       </section>
     </div>
   );

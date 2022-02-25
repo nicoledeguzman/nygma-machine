@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
+  color: #575757;
 }
 
 .body-left {
@@ -52,12 +53,7 @@ header p {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 65px;
-  color: #575757;
   text-transform: uppercase;
-}
-
-h4 {
-  color: #575757;
 }
 
 a {
@@ -143,8 +139,10 @@ button:-moz-focusring,
 
 /*advice ready*/
 
-.scaling-container {
-  height: auto;
+.advice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-element {
@@ -205,13 +203,18 @@ button:focus {
 }
 
 .advice-section {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
+  text-align: center;
 }
 
+p.advice-given {
+  color: #10AC84;
+}
 
 @media (max-width: 645px) {
   .flexContainer {
@@ -243,9 +246,5 @@ button:focus {
   .path {
     height: 21px;
     width: 21px;
-  }
-
-  h4 {
-    color:white;
   }
 }
