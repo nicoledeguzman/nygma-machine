@@ -19,12 +19,19 @@ const Advice = () => {
     });
   }, []);
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <div className='advice'>
       <section className='advice-section'>
         <p>So, {displayedName}, you asked for some life-changing advice?</p>
         <p>Here's what we pulled for you...</p>
         <p class="advice-given">{displayedAdvice}</p>
+        <button onClick={refreshPage}>
+          refresh
+        </button>
       </section>
     </div>
   );
