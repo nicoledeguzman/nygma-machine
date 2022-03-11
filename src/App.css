@@ -64,7 +64,7 @@ footer {
 
 h1,
 header p {
-  padding-right: 50px;
+  padding: 0 50px;
   margin: 0;
 }
 
@@ -72,6 +72,10 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 65px;
   text-transform: uppercase;
+}
+
+p {
+  background-color: transparent;
 }
 
 a {
@@ -86,10 +90,6 @@ a:focus {
   font-weight: bold;
   color: antiquewhite;
   text-decoration: none;
-}
-
-p {
-  background-color: transparent;
 }
 
 button,
@@ -144,7 +144,7 @@ button:focus {
   background-color: #10AC84;
 }
 
-/*advice form*/
+/* advice form */
 
 .form-element {
   width: 60%;
@@ -175,7 +175,7 @@ label {
   margin: 20px 0;
 }
 
-/*advice ready*/
+/* advice ready */
 
 .advice {
   display: flex;
@@ -197,19 +197,30 @@ p.advice-given {
   color: #10AC84;
 }
 
-@media (max-width: 645px) {
-  .flexContainer {
-    width:  441px;
-    height:  441px;
+/* media queries */
+
+@media (max-width: 550px) {
+  body {
+    height: 100vh;
   }
 
-  .path{
-    height: 29.4px;
-    width:29.4px;
+  .site-background {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .mazeText {
-    width: 90%;
+  header {
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  footer {
+    height: auto;
+    width: 100vw;
   }
 }
 
@@ -219,13 +230,12 @@ p.advice-given {
     padding: 10px;
   }
 
-  .flexContainer {
-    width: 315px;
-    height: 315px;
+  h1 {
+    font-size: 35px;
   }
 
-  .path {
-    height: 21px;
-    width: 21px;
+  p, 
+  label {
+    font-size: 14px;
   }
 }
