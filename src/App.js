@@ -2,10 +2,16 @@ import "./App.css";
 import GetApiResponse from "./GetApiResponse.js";
 import Advice from "./Advice.js";
 import {useState} from "react";
+import Modal from 'react-modal';
 
 function App() {
 
   const [showComponent, setShowComponent] = useState("api");
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
 
   return (
       <div className="site-background">
@@ -16,6 +22,18 @@ function App() {
           </header>
           <main>
             
+            <Modal 
+              isOpen={modalIsOpen}
+              className="modal-box"
+              overlayClassName="modal-overlay"
+            >
+              <h4>Modal title</h4>
+              <p>Modal body</p>
+              <button onClick={closeModal}>
+                let's go
+              </button>
+            </Modal>
+
             {/* Show component depending on state string value */}
 
             {

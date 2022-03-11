@@ -8,6 +8,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
@@ -17,6 +23,18 @@ body {
 .body-left {
   display: flex;
   flex-direction: column;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0px auto;
+  height: 100%;
+}
+
+.site-background {
+  background: white;
+  display: flex;
+  flex-direction: row;
 }
 
 header {
@@ -70,14 +88,6 @@ a:focus {
   text-decoration: none;
 }
 
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
 p {
   background-color: transparent;
 }
@@ -116,34 +126,25 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+button {
+  font-size: 18px;
+  display: block;
+  background-color: #1CD1A1;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0px auto;
-  height: 100%;
-}
-
-.site-background {
-  background: white;
-  display: flex;
-  flex-direction: row;
+button:hover,
+button:focus {
+  background-color: #10AC84;
 }
 
 /*advice form*/
-
-
-/*advice ready*/
-
-.advice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .form-element {
   width: 60%;
@@ -168,38 +169,18 @@ label {
   display: block;
 }
 
-img {
-  max-width: 70%;
-  height: auto;
-}
-
 .button-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-button {
-  font-size: 18px;
-  display: block;
-  background-color: #1CD1A1;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-}
+/*advice ready*/
 
-button:hover,
-button:focus {
-  background-color: #10AC84;
-}
-
-.logo-img {
-  left: 0px;
-  bottom: 180px;
+.advice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advice-section {
