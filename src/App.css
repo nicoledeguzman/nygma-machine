@@ -144,6 +144,51 @@ button:focus {
   background-color: #10AC84;
 }
 
+/* modal box and overlay */
+
+.modal-box {
+  /* presets */
+  position: absolute;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+  padding: 20px;
+  /* custom */
+  height: 40vh;
+  width: 40vw;
+  left: 50%;
+  margin-left: -20vw;
+  top: 50%;
+  margin-top: -20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1CD1A1;
+}
+
+.modal-box p {
+  text-align: center;
+}
+
+.modal-box button {
+  margin: 15px 0;
+}
+
+.modal-overlay {
+  /* presets */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  /* custom */
+  height: 100vh;
+  width: 100vw;
+}
+
 /* advice form */
 
 .form-element {

@@ -27,8 +27,8 @@ function App() {
               className="modal-box"
               overlayClassName="modal-overlay"
             >
-              <h4>Modal title</h4>
-              <p>Modal body</p>
+              <p>Need advice on that <em>one pressing thing</em>?</p>
+              <p>Throw that word into the Two Second Tip advice generator for some much-needed guidance.</p>
               <button onClick={closeModal}>
                 let's go
               </button>
@@ -57,8 +57,6 @@ function App() {
                 Created with Advice Slip API by Peter Del Mastro, Nate Yeow,
                 Nicole de Guzman and Mandy Poon at <a href="https://junocollege.com/" rel="noopener noreferrer" target="_blank">Juno College</a>
               </p>
-
-              {/* <p>Photo of Zoltan credits to: Hulki Okan Tabak and <a href="https://unsplash.com/photos/0EX0Q16ScvY" rel="noopener noreferrer" target="_blank">Unsplash</a> </p> */}
           </footer>
         </div>
       </div>
