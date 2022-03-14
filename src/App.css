@@ -271,10 +271,6 @@ p.advice-given {
 
 
 @media (max-width: 445px) {
-  body {
-    padding: 10px;
-  }
-
   h1 {
     font-size: 35px;
   }
